@@ -1,0 +1,80 @@
+@use "abstract" as *;
+.container {
+  height: 100vh;
+  #{$w}: 100%;
+  @include background;
+  padding: 20px 10%;
+  transition: background-image 0.3s;
+}
+
+.navbar {
+  @include flex;
+  #{$w}: 100%;
+
+  .logo {
+    #{$w}: 160px;
+    cursor: pointer;
+  }
+
+  .button {
+    background: $dark;
+    color: $light;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+  }
+}
+
+.content {
+  margin-top: 10%;
+  font-family: sans-serif;
+
+  h2 {
+    color: $red;
+    #{$f}: 34px;
+  }
+
+  h1 {
+    #{$f}: 100px;
+    color: $dark;
+    margin-top: -10px;
+  }
+
+  p {
+    color: $dark;
+    font-weight: 500;
+    max-width: 380px;
+    #{$f}: 1rem;
+  }
+
+  h3 {
+    margin-top: 30px;
+    font-weight: 600;
+    #{$f}: 24px;
+  }
+}
+
+.color-selector {
+  display: flex;
+  margin-top: 30px;
+
+  div {
+    #{$w}: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  div#red {
+    background-color: $red;
+  }
+
+  div#blue {
+    background-color: $blue;
+  }
+
+  div#black {
+    background-color: $black;
+  }
+}

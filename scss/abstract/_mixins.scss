@@ -1,0 +1,11 @@
+@mixin background {
+  background-image: url(/Images/BMW1.png);
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
